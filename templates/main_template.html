@@ -11,12 +11,18 @@
 <body>
     <nav >
         <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Main</a>
-          </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/home">Home</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Main</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/" class="dropdown-item">Main</a>
               </li>
+              <li>
+                <a href="/home" class="dropdown-item">Home</a>
+              </li>
+            </ul>
+ 
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gadgets</a>
               <ul class="dropdown-menu">
