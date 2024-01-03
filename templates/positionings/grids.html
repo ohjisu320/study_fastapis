@@ -1,5 +1,9 @@
 {% extends "main_template.html" %}
 
+{% block head_name %}
+<title>Grids</title>
+{% endblock %}
+
 {% block main_container %}
 
     <!-- 두 개를 합했을 때 원하는 대로 나오지 않았으면, class name 분리 -->
@@ -61,5 +65,8 @@
 
 
     </main>
-    <footer class="container-fluid">inner footer</footer>
+    
+{% endblock %}
+{% block footer %}
+<footer class="container-fluid">inner footer</footer>
 {% endblock %}

@@ -1,9 +1,13 @@
 {% extends "main_template.html" %}
-
+{% block head_name %}
+<title>Containers</title>
+{% endblock %}
 {% block main_container %}
     <main class="container">main</main>
 
-    <footer class="container-fluid">
-        <div class="container">inner footer</div>
-    </footer>
+{% endblock %}
+{% block footer %}
+<footer class="container-fluid">
+    <div class="container">inner footer</div>
+</footer>
 {% endblock %}
