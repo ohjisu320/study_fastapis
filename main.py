@@ -14,9 +14,11 @@ app.add_middleware(
 from routes.homes import router as event_router
 from routes.gadgets import gadgets as gadgets
 from routes.positionings import positionings as positionings
+from routes.users import router as users_router
 app.include_router(event_router, prefix="/home")
 app.include_router(gadgets, prefix="/gadgets")
 app.include_router(positionings, prefix="/positionings")
+app.include_router(users_router, prefix="/users")
 
 
 from fastapi import Request
