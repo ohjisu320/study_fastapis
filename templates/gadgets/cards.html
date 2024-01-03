@@ -3,34 +3,34 @@
 <title>Cards</title>
 {% endblock %}
 {% block main_container %}
-    <main class="container">
-        <div class="row">
-            <!-- card 배치 -->
-            <div class="col-6 card">
-                <div class="card-header bg-primary">Header</div>
-                <div class="card-body bg-secondary">Contents
-                </div>
-                <div class="card-footer bg-info">footer</div>
-            </div>
-            <div class="col-6 card">
-                <div class="card-header bg-primary">Header</div>
-                <div class="card-body bg-secondary">Contents
-                </div>
-                <div class="card-footer bg-info">footer</div>
-            </div>
-
+    
+<div class="row">
+    <!-- card 배치 -->
+    <div class="col-6 card">
+        <div class="card-header bg-primary">Header</div>
+        <div class="card-body bg-secondary">Contents
         </div>
-
-        <hr>
-        <!-- Basic card : 하나를 넣으면 전체를 차지함. -->
-        <div class="card">
-            <div class="card-header bg-primary">Header</div>
-            <div class="card-body bg-secondary">Contents
-            </div>
-            <div class="card-footer bg-info">footer</div>
+        <div class="card-footer bg-info">footer</div>
+    </div>
+    <div class="col-6 card">
+        <div class="card-header bg-primary">Header</div>
+        <div class="card-body bg-secondary">Contents
         </div>
+        <div class="card-footer bg-info">footer</div>
+    </div>
 
-    </main>
+</div>
+
+<hr>
+<!-- Basic card : 하나를 넣으면 전체를 차지함. -->
+<div class="card">
+    <div class="card-header bg-primary">Header</div>
+    <div class="card-body bg-secondary">Contents
+    </div>
+    <div class="card-footer bg-info">footer</div>
+</div>
+
+
 {% endblock %}
 {% block footer %}
 <footer>footer</footer>
