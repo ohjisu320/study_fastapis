@@ -30,8 +30,7 @@ async def inserts(request: Request) :
 # 회원 리스트 /users/list
 @router.get("/list") 
 async def inserts(request: Request) :
-    dict_details = dict(await request.form())
-    print(dict_details)
+    print(dict(request.query_params))
     return templates.TemplateResponse(name="users/lists.html",
                                       context={"request":request})
 
