@@ -8,7 +8,7 @@ router = APIRouter()
 
 # 회원 가입 form --users/form
 @router.get("/form") 
-async def inserts(request: Request) :
+async def form(request: Request) :
     return templates.TemplateResponse(name="users/inserts.html",
                                       context={"request":request})
 
@@ -21,7 +21,7 @@ async def inserts(request: Request) :
                                       context={"request":request})
 # 회원 리스트 /users/list
 @router.post("/list") 
-async def inserts(request: Request) :
+async def list_post(request: Request) :
     dict_details = dict(await request.form())
     print(dict_details)
     return templates.TemplateResponse(name="users/lists.html",
@@ -29,7 +29,7 @@ async def inserts(request: Request) :
 
 # 회원 리스트 /users/list
 @router.get("/list") 
-async def inserts(request: Request) :
+async def list_get(request: Request) :
     print(dict(request.query_params))
     return templates.TemplateResponse(name="users/lists.html",
                                       context={"request":request})
@@ -37,16 +37,16 @@ async def inserts(request: Request) :
 # 회원 상세정보 /users/read <- 특정 사람에 대한 정보가 표현되어야 함.
 # Path parameters : /users/read/id  or /users/read/unique_name  << 특정하기 위한 parameter는 unique해야 함. so 
 @router.get("/read/{object_id}") # 궁금한 점 format을 써도 되는지?
-async def inserts(request: Request, object_id) : # async def inserts(request: Request, object_id:str) << str을 붙이지 않은 것과 동일함
+async def read(request: Request, object_id) : # async def inserts(request: Request, object_id:str) << str을 붙이지 않은 것과 동일함
     dict_details = dict(request.query_params)
     print(dict_details)
     return templates.TemplateResponse(name="users/reads.html",
                                       context={"request":request})
 
 
-@router.post("/updates/{object_id}") 
-async def inserts(request: Request, object_id) :
-    dict_details = dict(await request.form())
-    print(dict_details)
-    return templates.TemplateResponse(name="users/updates.html",
+# 회원 리스트 /users/list
+@router.post("/delete") 
+async def delete(request: Request) :
+    print(dict(request.query_params))
+    return templates.TemplateResponse(name="users/lists.html",
                                       context={"request":request})
