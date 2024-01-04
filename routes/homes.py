@@ -10,7 +10,7 @@ router = APIRouter()
 #     html = "<body> <h2> It's Home. </h2> </body>"
 #     return html
 @router.get("/")
-async def root(request:Request) :
+async def home(request:Request) :
     pass
     return templates.TemplateResponse(name="homes/standards.html",
                                       context={"request":request})

@@ -39,8 +39,8 @@
                 <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
             </div>
             <div class="justify-content-center">
-              <button type="submit" class="btn btn-primary">List</button>
-              <button type="submit" class="btn btn-danger">Delete</button>
+              <button formmethod="get" formaction="/users/list" type="submit" class="btn btn-primary">List</button>
+              <button formmethod="post" formaction="/users/update".format type="submit" class="btn btn-danger">Delete</button>
             </div>    
           </form>
     </main>
