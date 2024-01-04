@@ -6,24 +6,27 @@ from fastapi import Request
 templates = Jinja2Templates(directory ="templates/")
 router = APIRouter()
 
-# 회원 가입
-@router.get("/inserts") # 주로 2단계까지만 연결
+# 회원 가입 form --users/form
+@router.get("/form") 
 async def inserts(request: Request) :
     return templates.TemplateResponse(name="users/inserts.html",
                                       context={"request":request})
-@router.get("/lists") # 주로 2단계까지만 연결
+
+@router.get("/insert") 
 async def inserts(request: Request) :
-    return templates.TemplateResponse(name="users/lists.html",
-                                      context={"request":request})
-@router.get("/logins") # 주로 2단계까지만 연결
-async def inserts(request: Request) :
+    pass # biz
     return templates.TemplateResponse(name="users/logins.html",
                                       context={"request":request})
-@router.get("/reads") # 주로 2단계까지만 연결
-async def inserts(request: Request) :
-    return templates.TemplateResponse(name="users/reads.html",
-                                      context={"request":request})
-@router.get("/updates") # 주로 2단계까지만 연결
-async def inserts(request: Request) :
-    return templates.TemplateResponse(name="users/updates.html",
-                                      context={"request":request})
+# @router.get("/lists") 
+# async def inserts(request: Request) :
+#     return templates.TemplateResponse(name="users/lists.html",
+#                                       context={"request":request})
+
+# @router.get("/reads") 
+# async def inserts(request: Request) :
+#     return templates.TemplateResponse(name="users/reads.html",
+#                                       context={"request":request})
+# @router.get("/updates") 
+# async def inserts(request: Request) :
+#     return templates.TemplateResponse(name="users/updates.html",
+#                                       context={"request":request})
