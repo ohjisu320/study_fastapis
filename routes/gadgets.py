@@ -6,21 +6,29 @@ templates = Jinja2Templates(directory ="templates/")
 
 
 @gadgets.get("/buttons")
-async def home(request: Request):
+async def buttons(request: Request):
     return templates.TemplateResponse(name="gadgets/buttons.html",
                                       context={"request": request})
 
-@gadgets.get("/cards")
-async def home(request:Request):
+@gadgets.get("/cards") # 'query : 질의' 라는 의미
+# "request = Request(query_parameters)" == async def cards_get("request:Request")
+async def cards_get(request:Request): # request - client가 날린 모든 정보를 담아서 변수로 전환한 것.
+    return templates.TemplateResponse(name="gadgets/cards.html",
+                                      context={"request": request})
+
+@gadgets.post("/cards")
+async def cards_post(request:Request):
+    # form_datas = await request.form()
     return templates.TemplateResponse(name="gadgets/cards.html",
                                       context={"request": request})
 
 @gadgets.get("/colors")
-async def home(request:Request):
+async def colors(request:Request):
     return templates.TemplateResponse(name="gadgets/colors.html",
                                       context={"request": request})
 
+
 @gadgets.get("/containers")
-async def home(request:Request):
+async def containers(request:Request):
     return templates.TemplateResponse(name="gadgets/containers.html",
                                       context={"request": request})

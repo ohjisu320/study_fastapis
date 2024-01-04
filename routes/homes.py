@@ -10,7 +10,7 @@ router = APIRouter()
 #     html = "<body> <h2> It's Home. </h2> </body>"
 #     return html
 @router.get("/")
-async def home(request:Request) :
+async def root(request:Request) :
     pass
     return templates.TemplateResponse(name="homes/standards.html",
                                       context={"request":request})
@@ -21,3 +21,10 @@ async def home(request:Request) :
 async def home_list() :
     html = "<body> <h2> It's Home List. </h2> </body>"
     return html
+
+# /homes/params_query -> parametes_query.html 호출
+@router.get("/params_query")
+async def home_param(request:Request) :
+    pass
+    return templates.TemplateResponse(name="homes/parameters_query.html",
+                                      context={"request":request})

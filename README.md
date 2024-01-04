@@ -1,6 +1,6 @@
 ### installed
 ```
-~$ pip install fastapi uvicorn jinja2
+~$ pip install fastapi uvicorn jinja2 python-multipart
 ```
 ### STUDIED FILES
 <details>

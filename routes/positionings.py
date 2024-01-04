@@ -5,21 +5,21 @@ from fastapi import Request
 templates = Jinja2Templates(directory = "templates/")
 
 @positionings.get("/forms")
-async def home(request: Request):
+async def forms(request: Request):
     return templates.TemplateResponse(name="positionings/forms.html",
                                       context={"request": request})
 
 @positionings.get("/grids")
-async def home(request: Request):
+async def grids(request: Request):
     return templates.TemplateResponse(name="positionings/grids.html",
                                       context={"request": request})
 
 @positionings.get("/standards")
-async def home(request: Request):
+async def standards(request: Request):
     return templates.TemplateResponse(name="positionings/standards.html",
                                       context={"request": request})
 
 @positionings.get("/tables")
-async def home(request: Request):
+async def tables(request: Request):
     return templates.TemplateResponse(name="positionings/tables.html",
                                       context={"request": request})
