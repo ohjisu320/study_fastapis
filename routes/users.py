@@ -42,7 +42,7 @@ async def inserts(request: Request, object_id) : # async def inserts(request: Re
     dict_details = dict(request.query_params)
     print(dict_details)
     return templates.TemplateResponse(name="users/reads.html",
-                                      context={"request":request}), object_id
+                                      context={"request":request})
 
 
 @router.post("/updates/{object_id}") 
